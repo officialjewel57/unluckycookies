@@ -1,6 +1,6 @@
 Game.registerMod("harder_core",{
     init:function(){
-      Game.Notify("Unluckiest mod ever has loaded!", "why did i add the exclamation mark because this isnt an exciting mod :sob:");
+      Game.Notify("Unluckiest mod ever has loaded!", "why did i add the exclamation mark because this isnt an exciting mod :sob:", [16, 5]);
       Game.registerHook('logic', function() {
         Game.lumpCurrentType = 0;
         for(let i = 0; i < 12; i++){
@@ -65,4 +65,5 @@ Game.registerMod("harder_core",{
     load:function(str){
     },
 });
+
 
