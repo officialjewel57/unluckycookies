@@ -1,6 +1,10 @@
 # Unluckiest-CCMod
 
-A new mod for cookie clicker that gives you the worst possible luck in cookie clicker.
+A new mod for cookie clicker that gives you the worst possible luck in cookie clicker. 
+
+# Special thanks:
+- the discord community 
+- @CursedSliver (discord) for helping with the obstacles that was getting this mod to work at all.
 
 ### <ins>INSTALLATION</ins>
 
