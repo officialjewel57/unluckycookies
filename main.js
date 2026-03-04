@@ -16,9 +16,9 @@ Game.registerMod("harder_core",{
       let halloweenA = Game.UpdateWrinklers.toString();
       let halloweenB = halloweenA.replace("if (Math.random()>failRate)", "if (Math.random()>2147483647)");
       let fortuneA = Game.getNewTicker.toString();
-      let fortuneB = fortuneA.replace("if (!manual && Game.T>Game.fps*10 && Game.Has('Fortune cookies') && Math.random()<(Game.HasAchiev('O Fortuna')?0.04:0.02))", "if (!manual && Game.T>Game.fps*10 && Game.Has('Fortune cookies') && Math.random()<0))");
+      let fortuneB = fortuneA.replace("if (!manual && Game.T>Game.fps*10 && Game.Has('Fortune cookies') && Math.random()<(Game.HasAchiev('O Fortuna')?0.04:0.02))", "if (!manual && Game.T>Game.fps*10 && Game.Has('Fortune cookies') && Math.random()<(Game.HasAchiev('O Fortuna')?0.00:0.00))");
       let veilA = Game.loseShimmeringVeil.toString();
-      let veilB = veilA.replace("if (Math.random()<Game.getVeilDefense())", "if (Math.random()<0");
+      let veilB = veilA.replace("if (Math.random()<Game.getVeilDefense())", "if (Math.random()<0)");
       let wrinklerA = Game.SpawnWrinkler.toString();
       let wrinklerB = wrinklerA.replace("if (Math.random()<0.0001) me.type=1;", "if (Math.random()<0) me.type=1;");
       let dragonPetA = Game.ClickSpecialPic.toString();
