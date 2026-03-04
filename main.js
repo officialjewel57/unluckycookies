@@ -1,3 +1,17 @@
+function inRect(x,y,rect)
+{
+  //find out if the point x,y is in the rotated rectangle rect{w,h,r,o} (width,height,rotation in radians,y-origin) (needs to be normalized)
+  //I found this somewhere online I guess
+  var dx = x+Math.sin(-rect.r)*(-(rect.h/2-rect.o)),dy=y+Math.cos(-rect.r)*(-(rect.h/2-rect.o));
+  var h1 = Math.sqrt(dx*dx + dy*dy);
+  var currA = Math.atan2(dy,dx);
+  var newA = currA - rect.r;
+  var x2 = Math.cos(newA) * h1;
+  var y2 = Math.sin(newA) * h1;
+  if (x2 > -0.5 * rect.w && x2 < 0.5 * rect.w && y2 > -0.5 * rect.h && y2 < 0.5 * rect.h) return true;
+  return false;
+}
+
 Game.registerMod("harder_core",{
     init:function(){
       Game.Notify("Unluckiest mod ever has loaded!", "why did i add the exclamation mark because this isnt an exciting mod :sob:", [16, 5]);
@@ -50,3 +64,4 @@ Game.registerMod("harder_core",{
     load:function(str){
     },
 });
+
