@@ -16,7 +16,7 @@ Game.registerMod("harder_core",{
     init:function(){
       Game.Notify("Unluckiest mod ever has loaded!", "why did i add the exclamation mark because this isnt an exciting mod :sob:", [16, 5]);
       let keepsakesA = Game.Reset.toString();
-      let keepsakesB = keepsakesA.replace("if (Game.Has('Keepsakes') && Game.seasonDrops.indexOf(me.name)!=-1 && Math.random()<1/5){}", "if (Game.Has('Keepsakes') && Game.seasonDrops.indexOf(me.name)!=-1 && Math.random()<0){}").replace("else if (Game.HasAchiev('O Fortuna') && me.tier=='fortune' && Math.random()<0.4){}", "else if (Game.HasAchiev('O Fortuna') && me.tier=='fortune' && Math.random()<0){}");
+      let keepsakesB = keepsakesA.replace("Game.chimeType=0;", "Game.chimeType=0; if(hard){Game.seed='ynlaq'}").replace("if (Game.Has('Keepsakes') && Game.seasonDrops.indexOf(me.name)!=-1 && Math.random()<1/5){}", "if (Game.Has('Keepsakes') && Game.seasonDrops.indexOf(me.name)!=-1 && Math.random()<0){}").replace("else if (Game.HasAchiev('O Fortuna') && me.tier=='fortune' && Math.random()<0.4){}", "else if (Game.HasAchiev('O Fortuna') && me.tier=='fortune' && Math.random()<0){}");
       let sugarA = Game.clickLump.toString();
       let sugarB = sugarA.replace('var amount=choose([0,1]);', 'var amount=0;');
       let popFuncA = Game.shimmerTypes.golden.popFunc.toString();
